@@ -1,1 +1,4 @@
-# Cetep_News
+# Cetep News
+
+## Projeto desenvolvido no CETEP Macaúbas
+
