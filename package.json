@@ -1,0 +1,19 @@
+{
+  "name": "cetep_news",
+  "version": "1.0.0",
+  "description": "Projeto de um blog desenvolvido pelos alunos do CETEP da Bacia do Paramirim  para disponibilizar notícias aos estudantes.",
+  "main": "index.js",
+  "scripts": {
+    "lint:check": "prettier --check .",
+    "lint:fix": "prettier --write ."
+  },
+  "keywords": [
+    "blog",
+    "cetep"
+  ],
+  "author": "Alunos do 3 INF AV do CETEP",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^3.3.3"
+  }
+}
