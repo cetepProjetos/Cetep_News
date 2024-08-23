@@ -51,7 +51,18 @@ Criamos os testes automatizados
    npm istall jest --sava-dev
   ```
 - Executamos um teste vedadeiro na pasta **test**
-  
+
+### 5° passo
+Criamos o arquivo `docker-compose.yaml`
+  - Definimos a versão '3'
+  - Criamos o servidor do Banco de Dados
+
+Criamos o arquivo `database.js`
+  - Possibilita conexão com o Banco de Dados
+```
+infra > database.js
+```  
+
 
 
 
