@@ -8,8 +8,8 @@
     "lint:fix": "prettier --write .",
     "test": "jest",
     "test:watch": "jest --watch",
-    "service:up": "",
-    "services:down": ""
+    "service:up": "docker compose up -d",
+    "services:down": "docker compose down"
   },
   "keywords": [
     "blog",
