@@ -53,6 +53,8 @@ Criamos os testes automatizados
 - Executamos um teste vedadeiro na pasta **test**
 
 ### 5° passo
+Para esses passo necessário que a máquina tenha o [docker](https://www.docker.com/) instalado
+
 Criamos o arquivo `docker-compose.yaml`
   - Definimos a versão '3'
   - Criamos o servidor do Banco de Dados
@@ -61,8 +63,18 @@ Criamos o arquivo `database.js`
   - Possibilita conexão com o Banco de Dados
 ```
 infra > database.js
-```  
+```
 
-
-
+Para inicializar o banco rode o seguinte comando
+```bash
+  docker compose up -d 
+```
+Para parar o banco de dados rode o seguinte comando
+```bash
+  docker compose down 
+```
+Para verificar se o banco está sendo executado
+```bash
+  docker compose ps
+```
 

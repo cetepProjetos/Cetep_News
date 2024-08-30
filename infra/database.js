@@ -1,7 +1,6 @@
 require('dotenv').config()
 const {Client} = require('pg')
 
-
 async function query(sql) {
   const client = new Client({
     host: process.env.POSTGRES_HOST,
