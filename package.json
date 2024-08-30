@@ -7,7 +7,9 @@
     "lint:check": "prettier --check .",
     "lint:fix": "prettier --write .",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "service:up": "",
+    "services:down": ""
   },
   "keywords": [
     "blog",
