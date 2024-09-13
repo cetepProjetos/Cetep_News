@@ -10,10 +10,6 @@ test('executando soma de 2 + 2', async function (){
   expect(resultado.rows[0].total).toBe(4)
 });
 
-async function f(params) {
-  
-}
-
 
 
   

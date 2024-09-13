@@ -9,9 +9,9 @@ async function up(dryRun) {
    const resultado = await runner({
         databaseUrl: process.env.DATABASE_URL,
         dir: join('infra', 'migrations'),
-            direction:'up',
-            dryRun: dryRun,
-            verbose: true,
+        direction:'up',
+        dryRun: dryRun,
+        verbose: true,
 
     })
     

@@ -77,4 +77,52 @@ Para verificar se o banco está sendo executado
 ```bash
   docker compose ps
 ```
+## 6° passo
 
+Instalamos a ferramenta node-pg-migrate para dar início ao versionamento do banco de dados.
+
+  - Criamos a pasta migrations e os arquivos migrate através do comando:
+
+    ```bash
+    npm run migrations:create node-pg-migrate create --migrations-dir infra/migrations/
+    ```
+    Estrutura do comando
+    ```bash
+    npm run migrations:create node-pg-migrate create --migrations-dir caminho/para/o/arquivo
+    ```
+    
+  - Criamos o caminho entre as migrate e o bando de dados. Para o banco receber as atualizações.
+    ```bash
+    npm run migrations:up node-pg-migrate up --migrations-dir infra/migrations
+    ```
+    Estrutura do comando
+    ```bash
+    npm run migrations:up node-pg-migrate up --migrations-dir caminho/para/o/arquivo
+    ```
+    No arquivo `migration.js` tem o seguinte código:
+    ```bash
+    require('dotenv').config()
+    const {runner} = require("node-pg-migrate")
+    const {join} = require('path')
+    
+    async function up(dryRun) {
+
+    console.log("process.env.DATABASE_URL", process.env.DATABASE_URL);
+    const resultado = await runner({
+        databaseUrl: process.env.DATABASE_URL,
+        dir: join('infra', 'migrations'),
+        direction:'up',
+        dryRun: dryRun,
+        verbose: true,
+
+    })
+    
+    return resultado
+    }
+
+    module.exports  = {
+    up
+    }
+    ```
+O principal objetivo desse código é executar as migrações do banco de dados (ou seja, aplicar as alterações no banco). Ele faz isso através da função runner da biblioteca node-pg-migrate.
+    
