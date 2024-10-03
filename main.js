@@ -1,32 +1,57 @@
-const http = require('node:http')
+const express = require('express');
+const app = express();
+const port = 3000;
 
-const server = http.createServer(function (req, res){
-const method = req.method
-const url = req.url
-console.log("metado", method);
-console.log("url", url);
+app.use(express.json());
 
-if(url === "/noticias-gerais" && method === "GET"){
-  res.writeHead(211);
-  res.end("notícias gerais")
-  return
-}
-if(url === "/top-noticias" && method === "GET"){
-  res.writeHead(211);
-  res.end("as melhores notícias")
-  return
-}
-if(url === "/bunner" && method === "GET"){
-  res.writeHead(211);
-  res.end("bunner")
-  return
-}
+const noticias = [
+  {
+    id: "2121",
+    sku: "amanha-visita-secretaria",
+    titulo: "Amanhã receberemos como visita a secretária.",
+    data: "2024-09-28",
+    planoDeFundo: "https://www.scurra.com.br/blog/dicas-para-criar-reunioes-online-e-com-resultados-exponenciais/",
+    inconDaNoticia: "https://lspost.com.br/blog/softwares/plataforma-para-reuniao-online-facilita-comunicacao-entre-funcionarios/",
+    descricao: "Vamos receber a visita",
+    curtidas: 56,
+    visualizacao: 100
+  }
+];
 
-  res.writeHead(404)
-  res.end()
-})
+app.get("/", function(req, res) {
+  res.send("Hello World!");
+});
 
-server.listen(3000, '0.0.0.0', function(){
-  console.log(`run initialize`);
-  
-})
+app.get("/noticias", function(req, res) {
+  res.json(noticias);
+});
+
+app.listen(port, function() {
+  console.log("Servidor subiu na porta " + port);
+});
+app.get("/noticias/:sku", function(req, res) {
+  const sku = req.params.sku;
+
+  for(const noticia of noticias) {
+    if (noticia.sku == sku) {
+      res.json(noticia);
+      return;
+    }
+  }
+
+  res.sendStatus(404);
+});
+
+app.post("/noticias", function(req, res) {
+  const corpoDaNoticia = req.body;
+  noticias.push(corpoDaNoticia);
+  res.sendStatus(200);
+});
+
+app.listen(port, function() {
+  console.log("Subiu o servidor");
+});
+
+app.get("/noticias/tops", function(req, res) {
+  res.send("Tops notícias");
+});
