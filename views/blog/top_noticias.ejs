@@ -1,0 +1,72 @@
+<main class="container">
+<% if(noticias.length >0 ) { %>
+
+
+
+  <section class="recent-news">
+    <h2 class="recent-news__title"></h2>
+
+   
+   
+    <ul class="recent-news__list">
+      
+  <% noticias.forEach((noticia)=>{ %>
+    <li class="recent-news__list-item">
+      <article class="recent-news__article">
+        <figure class="recent-news__figure">
+          <img
+            class="recent-news__figure-img"
+            src="<%=noticia.imageDeFundo %>"
+            alt="Imagem da notícia Governo corta pé de meia no CETEP"
+          />
+          <figcaption class="recent-news__figure-description">
+            <%=noticia.descricao%>
+          </figcaption>
+          <div class="recent-news__logo-send">
+            <img
+              class="recent-news__logo-send-icon"
+              src="/assets/imagens/send.png"
+              alt="Ícone de envio"
+            />
+          </div>
+        </figure>
+        <div class="recent-news__reactions-flex-wrapper">
+          <div class="recent-news__flex-item">
+            <img
+              class="recent-news__flex-item-icon"
+              src="/assets/imagens/favorite.png"
+              alt="Ícone de coração"
+            />
+            <span class="recent-news__flex-item-amount"><%= noticia.curtidas%></span>
+          </div>
+          <div class="recent-news__flex-item">
+            <img
+              class="recent-news__flex-item-icon"
+              src="/assets/imagens/preview@2x.png"
+              alt="Ícone de visualizações"
+            />
+            <span class="recent-news__flex-item-amount"><%= noticia.visualizacoes%></span>
+          </div>
+          <div class="recent-news__flex-item">
+            <img
+              class="recent-news__flex-item-icon"
+              src="/assets/imagens/mood.png"
+              alt="Ícone de reação"
+            />
+          </div>
+        </div>
+      </article>
+    </li>
+  <%})%>
+
+    
+     
+      
+     
+     
+      
+    </ul>
+    <% } else { %>
+      <h1>SEM NOTICIAS</h1>
+      <% } %>
+  </section>

@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="<%= metaDescricao %> ">
+    <meta name="keywords" content="<%= metaKeywords %> ">
+    <meta property= "og:title" content="<%= metaTitle %> ">
+    <meta property= "og:description" content="<%= metaDescricao %> ">
+    <meta property= "og:image" content="<%= metaUrlImage %> ">
+    <meta property= "og:url" content="<%= metaUrl %> ">
+
     <title>Document</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,247 +25,14 @@
     <link rel="stylesheet" href="/assets/style/btn-event-snack.css" />
     <link rel="stylesheet" href="/assets/style/menu.css" />
 
-
   </head>
   <body>
-    <header class="header">
-      <div class="header__left">
-        <button class="icon-btn" aria-label="Menu" onclick="openMenu()">
-            <i class="menu-icon"><img src="/assets/icons/menu.png" alt=""></i>
-        </button>
-      </div>
-      <div class="header__center">
-        <img src="/assets/logo.png" alt="Logo" class="logo">
-      </div>
-      <div class="header__right">
-        <button class="icon-btn" aria-label="Buscar" onclick="goToSearchPage()">
-            <i class="quest-icon"><img src="/assets/icons/search.png" alt=""></i>
-        </button>
-      </div>
-    </header>
-    <div id="sidebar" class="sidebar">
-      <button class="close-btn" onclick="closeMenu()">
-        <img src="/assets/icons/back.png" alt="Back" class="back-icon" />
-      </button>
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </div>
-    <section class="video-banner">
-      <div class="video-banner__rounded"></div>
-      <div class="video-banner__container">
-        <video
-          muted
-          autoplay
-          loop
-          src="/assets/banner-video/vinheta(720p).mp4"
-          type="video/mp4"
-        ></video>
-      </div>
-    </section>
-    <main class="container">
-      <section class="recent-news">
-        <h2 class="recent-news__title">NOTÍCIAS RECENTES</h2>
-        <div class="recent-news__flex-wrapper">
-          <h3 class="recent-news__topic recent-news__topic--current">
-            Economia
-          </h3>
-          <h3 class="recent-news__topic">Finanças</h3>
-          <h3 class="recent-news__topic">Educação</h3>
-          <h3 class="recent-news__topic">Política</h3>
-        </div>
-        <ul class="recent-news__list">
-          <li class="recent-news__list-item">
-            <article class="recent-news__article">
-              <figure class="recent-news__figure">
-                <img
-                  class="recent-news__figure-img"
-                  src="https://jornaldia.com.br/wp-content/uploads/2024/03/image-218.png"
-                  alt="Imagem da notícia Governo corta pé de meia no CETEP"
-                />
-                <figcaption class="recent-news__figure-description">
-                  Governo corta pé de meia no CETEP, Governo corta pé de meia no CETEP,Governo corta pé de meia no CETEP,Governo corta pé de meia no CETEP,Governo corta pé de meia no CETEP,Governo corta pé de meia no CETEP,Governo corta pé de meia no CETEP,Governo corta pé de meia no CETEP,Governo corta pé de meia no CETEP...
-                </figcaption>
-                <div class="recent-news__logo-send">
-                  <img
-                    class="recent-news__logo-send-icon"
-                    src="/assets/imagens/send.png"
-                    alt="Ícone de envio"
-                  />
-                </div>
-              </figure>
-              <div class="recent-news__reactions-flex-wrapper">
-                <div class="recent-news__flex-item">
-                  <img
-                    class="recent-news__flex-item-icon"
-                    src="/assets/imagens/favorite.png"
-                    alt="Ícone de coração"
-                  />
-                  <span class="recent-news__flex-item-amount">2,6k</span>
-                </div>
-                <div class="recent-news__flex-item">
-                  <img
-                    class="recent-news__flex-item-icon"
-                    src="/assets/imagens/preview@2x.png"
-                    alt="Ícone de visualizações"
-                  />
-                  <span class="recent-news__flex-item-amount">2,6k</span>
-                </div>
-                <div class="recent-news__flex-item">
-                  <img
-                    class="recent-news__flex-item-icon"
-                    src="/assets/imagens/mood.png"
-                    alt="Ícone de reação"
-                  />
-                </div>
-              </div>
-            </article>
-          </li>
-          <li class="recent-news__list-item">
-            <article class="recent-news__article">
-              <figure class="recent-news__figure">
-                <img
-                  class="recent-news__figure-img"
-                  src="https://jornaldia.com.br/wp-content/uploads/2024/03/image-218.png"
-                  alt="Imagem da notícia Governo corta pé de meia no CETEP"
-                />
-                <figcaption class="recent-news__figure-description">
-                  Governo corta pé de meia no CETEP...
-                </figcaption>
-                <div class="recent-news__logo-send">
-                  <img
-                    class="recent-news__logo-send-icon"
-                    src="/assets/imagens/send.png"
-                    alt="Ícone de envio"
-                  />
-                </div>
-              </figure>
-              <div class="recent-news__reactions-flex-wrapper">
-                <div class="recent-news__flex-item">
-                  <img
-                    class="recent-news__flex-item-icon"
-                    src="/assets/imagens/favorite.png"
-                    alt="Ícone de coração"
-                  />
-                  <span class="recent-news__flex-item-amount">2,6k</span>
-                </div>
-                <div class="recent-news__flex-item">
-                  <img
-                    class="recent-news__flex-item-icon"
-                    src="/assets/imagens/preview@2x.png"
-                    alt="Ícone de visualizações"
-                  />
-                  <span class="recent-news__flex-item-amount">2,6k</span>
-                </div>
-                <div class="recent-news__flex-item">
-                  <img
-                    class="recent-news__flex-item-icon"
-                    src="/assets/imagens/mood.png"
-                    alt="Ícone de reação"
-                  />
-                </div>
-              </div>
-            </article>
-          </li>
-          <li class="recent-news__list-item">
-            <article class="recent-news__article">
-              <figure class="recent-news__figure">
-                <img
-                  class="recent-news__figure-img"
-                  src="https://jornaldia.com.br/wp-content/uploads/2024/03/image-218.png"
-                  alt="Imagem da notícia Governo corta pé de meia no CETEP"
-                />
-                <figcaption class="recent-news__figure-description">
-                  Governo corta pé de meia no CETEP...
-                </figcaption>
-                <div class="recent-news__logo-send">
-                  <img
-                    class="recent-news__logo-send-icon"
-                    src="/assets/imagens/send.png"
-                    alt="Ícone de envio"
-                  />
-                </div>
-              </figure>
-              <div class="recent-news__reactions-flex-wrapper">
-                <div class="recent-news__flex-item">
-                  <img
-                    class="recent-news__flex-item-icon"
-                    src="/assets/imagens/favorite.png"
-                    alt="Ícone de coração"
-                  />
-                  <span class="recent-news__flex-item-amount">2,6k</span>
-                </div>
-                <div class="recent-news__flex-item">
-                  <img
-                    class="recent-news__flex-item-icon"
-                    src="/assets/imagens/preview@2x.png"
-                    alt="Ícone de visualizações"
-                  />
-                  <span class="recent-news__flex-item-amount">2,6k</span>
-                </div>
-                <div class="recent-news__flex-item">
-                  <img
-                    class="recent-news__flex-item-icon"
-                    src="/assets/imagens/mood.png"
-                    alt="Ícone de reação"
-                  />
-                </div>
-              </div>
-            </article>
-          </li>
-          <li class="recent-news__list-item">
-            <article class="recent-news__article">
-              <figure class="recent-news__figure">
-                <img
-                  class="recent-news__figure-img"
-                  src="https://www.assistencialismo.com.br/wp-content/uploads/2024/02/b0cdeec2-b294-4e92-8bd0-47d6bc140ee1.jpeg"
-                  alt="..."
-                />
-                <figcaption class="recent-news__figure-description">
-                  ...
-                </figcaption>
-                <div class="recent-news__logo-send">
-                  <img
-                    class="recent-news__logo-send-icon"
-                    src="/assets/imagens/send.png"
-                    alt="Ícone de envio"
-                  />
-                </div>
-              </figure>
-              <div class="recent-news__reactions-flex-wrapper">
-                <div class="recent-news__flex-item">
-                  <img
-                    class="recent-news__flex-item-icon"
-                    src="/assets/imagens/favorite.png"
-                    alt="Ícone de coração"
-                  />
-                  <span class="recent-news__flex-item-amount">2,6k</span>
-                </div>
-                <div class="recent-news__flex-item">
-                  <img
-                    class="recent-news__flex-item-icon"
-                    src="/assets/imagens/preview@2x.png"
-                    alt="Ícone de visualizações"
-                  />
-                  <span class="recent-news__flex-item-amount">2,6k</span>
-                </div>
-                <div class="recent-news__flex-item">
-                  <img
-                    class="recent-news__flex-item-icon"
-                    src="/assets/imagens/mood.png"
-                    alt="Ícone de reação"
-                  />
-                </div>
-              </div>
-            </article>
-          </li>
-        </ul>
-      </section>
+   <%- include('menu'); %>
+   <%- include('banner'); %>
+   <%- include('top_noticias', {noticias: topsNoticiasSemanais, }); %>
+   <%- include('top_noticias', {noticias: noticiasRecentes,}); %>
+
+    
       <section class="top-news">
         <h2 class="top-news__title">Top Notícias</h2>
         <div class="top-news__container-news">

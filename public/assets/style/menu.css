@@ -1,0 +1,51 @@
+.sidebar {
+  height: 646px;
+  width:308px ;
+  position: fixed;
+  top: 0;
+  left: -308px;
+  background-color: #555555;
+  overflow-x: hidden;
+  transition: left 0.5s;
+  padding-top: 20px;
+  z-index: 1000;
+  border-radius: 0px 12px 12px 0px;
+  border: 1px #000000;
+}
+
+.sidebar.open{
+  left: 0;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 32px 10px;
+}
+
+.sidebar ul li {
+  padding: 0px;
+  margin: 10px 0px;
+  text-align: left;
+  background-color:#2C2C2C ;
+  width: 276px;
+  height: 48px;
+  border-radius: 8px;
+}
+
+.sidebar .close-btn {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  
+}
+
+.sidebar .back-icon {
+  width: 30px;
+  height: auto;
+}
+
+
+

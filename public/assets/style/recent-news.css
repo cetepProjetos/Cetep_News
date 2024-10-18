@@ -1,0 +1,153 @@
+.recent-news {
+  padding: 20px;
+
+  width: 100%;
+  height: auto;
+
+  font-size: 1rem;
+
+  background-color: #e6f4ff;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.recent-news__title {
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 19px;
+}
+
+.recent-news__flex-wrapper {
+  display: flex;
+  gap: 24px;
+}
+
+.recent-news__topic {
+  font-size: 1em;
+  font-weight: 500;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  cursor: pointer;
+
+  opacity: 50%;
+  transition: opacity 0.3s;
+}
+
+.recent-news__topic--current {
+  opacity: 1;
+
+  overflow: visible;
+
+  position: relative;
+}
+
+.recent-news__topic--current::after {
+  content: '';
+
+  position: absolute;
+
+  width: 32%;
+  height: 3px;
+
+  background-color: #EB153C;
+  
+  left: 46%;
+  transform: translateX(-50%);
+  bottom: -1px;   
+}
+
+.recent-news__list {
+  list-style: none;
+
+  display: flex;
+  gap: 16px;
+
+  overflow-x: scroll;
+  scrollbar-width: none;
+
+}
+
+.recent-news__article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  gap: 15px;
+}
+
+.recent-news__figure {
+  width: 200px;
+  height: 175px;
+
+  position: relative;
+}
+
+.recent-news__figure-img {
+  width: 200px;
+  height: 130px;
+
+  object-fit: cover;
+
+  border-radius: 12px;
+
+  box-shadow: 10px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+.recent-news__figure-description {
+  width: 80%;
+  padding-left: 8px;
+  line-height: 19px;
+  height: 35px;
+
+  font-weight: 500;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.recent-news__logo-send {
+  position: absolute;
+
+  z-index: 999;
+
+  top: 0;
+  right: 0;
+
+}
+
+.recent-news__reactions-flex-wrapper{
+  width: 100%;
+
+  padding: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.recent-news__flex-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.recent-news__flex-item-icon {
+  cursor: pointer;
+}
+
+.recent-news__flex-item-amount {
+  font-size: 10px;
+  line-height: 12px;
+
+  user-select: none;
+}
