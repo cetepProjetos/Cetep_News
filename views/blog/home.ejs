@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/style/index.css">
+    <link rel="stylesheet" href="/assets/style/header.css" />
+    <link rel="stylesheet" href="/assets/style/video-banner.css" />
+    <link rel="stylesheet" href="/assets/style/recent-news.css">
+    <link rel="stylesheet" href="/assets/style/top_news.css" />
+    <link rel="stylesheet" href="/assets/style/events.css">
+    <link rel="stylesheet" href="/assets/style/btn-event-snack.css" />
+    <link rel="stylesheet" href="/assets/style/menu.css" />
+
+
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__left">
+        <button class="icon-btn" aria-label="Menu" onclick="openMenu()">
+            <i class="menu-icon"><img src="/assets/icons/menu.png" alt=""></i>
+        </button>
+      </div>
+      <div class="header__center">
+        <img src="/assets/logo.png" alt="Logo" class="logo">
+      </div>
+      <div class="header__right">
+        <button class="icon-btn" aria-label="Buscar" onclick="goToSearchPage()">
+            <i class="quest-icon"><img src="/assets/icons/search.png" alt=""></i>
+        </button>
+      </div>
+    </header>
+    <div id="sidebar" class="sidebar">
+      <button class="close-btn" onclick="closeMenu()">
+        <img src="/assets/icons/back.png" alt="Back" class="back-icon" />
+      </button>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <section class="video-banner">
+      <div class="video-banner__rounded"></div>
+      <div class="video-banner__container">
+        <video
+          muted
+          autoplay
+          loop
+          src="/assets/banner-video/vinheta(720p).mp4"
+          type="video/mp4"
+        ></video>
+      </div>
+    </section>
+    <main class="container">
+      <section class="recent-news">
+        <h2 class="recent-news__title">NOTÍCIAS RECENTES</h2>
+        <div class="recent-news__flex-wrapper">
+          <h3 class="recent-news__topic recent-news__topic--current">
+            Economia
+          </h3>
+          <h3 class="recent-news__topic">Finanças</h3>
+          <h3 class="recent-news__topic">Educação</h3>
+          <h3 class="recent-news__topic">Política</h3>
+        </div>
+        <ul class="recent-news__list">
+          <li class="recent-news__list-item">
+            <article class="recent-news__article">
+              <figure class="recent-news__figure">
+                <img
+                  class="recent-news__figure-img"
+                  src="https://jornaldia.com.br/wp-content/uploads/2024/03/image-218.png"
+                  alt="Imagem da notícia Governo corta pé de meia no CETEP"
+                />
+                <figcaption class="recent-news__figure-description">
+                  Governo corta pé de meia no CETEP, Governo corta pé de meia no CETEP,Governo corta pé de meia no CETEP,Governo corta pé de meia no CETEP,Governo corta pé de meia no CETEP,Governo corta pé de meia no CETEP,Governo corta pé de meia no CETEP,Governo corta pé de meia no CETEP,Governo corta pé de meia no CETEP...
+                </figcaption>
+                <div class="recent-news__logo-send">
+                  <img
+                    class="recent-news__logo-send-icon"
+                    src="/assets/imagens/send.png"
+                    alt="Ícone de envio"
+                  />
+                </div>
+              </figure>
+              <div class="recent-news__reactions-flex-wrapper">
+                <div class="recent-news__flex-item">
+                  <img
+                    class="recent-news__flex-item-icon"
+                    src="/assets/imagens/favorite.png"
+                    alt="Ícone de coração"
+                  />
+                  <span class="recent-news__flex-item-amount">2,6k</span>
+                </div>
+                <div class="recent-news__flex-item">
+                  <img
+                    class="recent-news__flex-item-icon"
+                    src="/assets/imagens/preview@2x.png"
+                    alt="Ícone de visualizações"
+                  />
+                  <span class="recent-news__flex-item-amount">2,6k</span>
+                </div>
+                <div class="recent-news__flex-item">
+                  <img
+                    class="recent-news__flex-item-icon"
+                    src="/assets/imagens/mood.png"
+                    alt="Ícone de reação"
+                  />
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="recent-news__list-item">
+            <article class="recent-news__article">
+              <figure class="recent-news__figure">
+                <img
+                  class="recent-news__figure-img"
+                  src="https://jornaldia.com.br/wp-content/uploads/2024/03/image-218.png"
+                  alt="Imagem da notícia Governo corta pé de meia no CETEP"
+                />
+                <figcaption class="recent-news__figure-description">
+                  Governo corta pé de meia no CETEP...
+                </figcaption>
+                <div class="recent-news__logo-send">
+                  <img
+                    class="recent-news__logo-send-icon"
+                    src="/assets/imagens/send.png"
+                    alt="Ícone de envio"
+                  />
+                </div>
+              </figure>
+              <div class="recent-news__reactions-flex-wrapper">
+                <div class="recent-news__flex-item">
+                  <img
+                    class="recent-news__flex-item-icon"
+                    src="/assets/imagens/favorite.png"
+                    alt="Ícone de coração"
+                  />
+                  <span class="recent-news__flex-item-amount">2,6k</span>
+                </div>
+                <div class="recent-news__flex-item">
+                  <img
+                    class="recent-news__flex-item-icon"
+                    src="/assets/imagens/preview@2x.png"
+                    alt="Ícone de visualizações"
+                  />
+                  <span class="recent-news__flex-item-amount">2,6k</span>
+                </div>
+                <div class="recent-news__flex-item">
+                  <img
+                    class="recent-news__flex-item-icon"
+                    src="/assets/imagens/mood.png"
+                    alt="Ícone de reação"
+                  />
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="recent-news__list-item">
+            <article class="recent-news__article">
+              <figure class="recent-news__figure">
+                <img
+                  class="recent-news__figure-img"
+                  src="https://jornaldia.com.br/wp-content/uploads/2024/03/image-218.png"
+                  alt="Imagem da notícia Governo corta pé de meia no CETEP"
+                />
+                <figcaption class="recent-news__figure-description">
+                  Governo corta pé de meia no CETEP...
+                </figcaption>
+                <div class="recent-news__logo-send">
+                  <img
+                    class="recent-news__logo-send-icon"
+                    src="/assets/imagens/send.png"
+                    alt="Ícone de envio"
+                  />
+                </div>
+              </figure>
+              <div class="recent-news__reactions-flex-wrapper">
+                <div class="recent-news__flex-item">
+                  <img
+                    class="recent-news__flex-item-icon"
+                    src="/assets/imagens/favorite.png"
+                    alt="Ícone de coração"
+                  />
+                  <span class="recent-news__flex-item-amount">2,6k</span>
+                </div>
+                <div class="recent-news__flex-item">
+                  <img
+                    class="recent-news__flex-item-icon"
+                    src="/assets/imagens/preview@2x.png"
+                    alt="Ícone de visualizações"
+                  />
+                  <span class="recent-news__flex-item-amount">2,6k</span>
+                </div>
+                <div class="recent-news__flex-item">
+                  <img
+                    class="recent-news__flex-item-icon"
+                    src="/assets/imagens/mood.png"
+                    alt="Ícone de reação"
+                  />
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="recent-news__list-item">
+            <article class="recent-news__article">
+              <figure class="recent-news__figure">
+                <img
+                  class="recent-news__figure-img"
+                  src="https://www.assistencialismo.com.br/wp-content/uploads/2024/02/b0cdeec2-b294-4e92-8bd0-47d6bc140ee1.jpeg"
+                  alt="..."
+                />
+                <figcaption class="recent-news__figure-description">
+                  ...
+                </figcaption>
+                <div class="recent-news__logo-send">
+                  <img
+                    class="recent-news__logo-send-icon"
+                    src="/assets/imagens/send.png"
+                    alt="Ícone de envio"
+                  />
+                </div>
+              </figure>
+              <div class="recent-news__reactions-flex-wrapper">
+                <div class="recent-news__flex-item">
+                  <img
+                    class="recent-news__flex-item-icon"
+                    src="/assets/imagens/favorite.png"
+                    alt="Ícone de coração"
+                  />
+                  <span class="recent-news__flex-item-amount">2,6k</span>
+                </div>
+                <div class="recent-news__flex-item">
+                  <img
+                    class="recent-news__flex-item-icon"
+                    src="/assets/imagens/preview@2x.png"
+                    alt="Ícone de visualizações"
+                  />
+                  <span class="recent-news__flex-item-amount">2,6k</span>
+                </div>
+                <div class="recent-news__flex-item">
+                  <img
+                    class="recent-news__flex-item-icon"
+                    src="/assets/imagens/mood.png"
+                    alt="Ícone de reação"
+                  />
+                </div>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </section>
+      <section class="top-news">
+        <h2 class="top-news__title">Top Notícias</h2>
+        <div class="top-news__container-news">
+          <article class="top-news__container-news__news news-1">
+            <div class="top-news__container-news__news__flex-wrapper">
+              <img
+                class="top-news__news__image"
+                src="https://s3-alpha-sig.figma.com/img/9267/a605/ad4c882290904386f408c2b4925c72bc?Expires=1726444800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=SmlnEPfN4P7Y6n1h6jgkSDFNb5tcEDCjHFh0bXZizIm7yPzZYvLxmJBl0ynG0OcWTeX6sUHoN1j-qKBONegkNFSA9r9N~HwqEWx15SQZUUAmqLRM4RTxiYrfu4nMIyE5uv7cB8iI0AQjtvuCqQRhux5kNaWlJ91FTKhGDXNKeiZgpVrqCcp0MKLJL0Ie0Iyqv6YZWTtBSf-xEJYf-yrtORMC8kNrkS17BtavLcXYt0C-GPNB4QO6h0JZ8ViT27tpC0dclsOsxcoihxuWHzgznBjdclsKi6xRQyUy~-gwHEp-YMFVqYwZWQzg8WNO7Qcv4zG1qI3-szdyKqa5ttTDyw__"
+                alt="Avião voando em um céu azul"
+              />
+              <h3 class="top-news__news__title">
+                Avião cai em algum local do Brasil...
+              </h3>
+            </div>
+          </article>
+          <article class="top-news__container-news__news news-2">
+            <div class="top-news__container-news__news__flex-wrapper">
+              <img
+                class="top-news__news__image"
+                src="https://s3-alpha-sig.figma.com/img/c970/db23/ce4ad0e0dff663d79945827b998bda59?Expires=1726444800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=LhJaVsnc~i1gOlueGEde0kvOKfjSab0SZWXvaiOBsNJg1kN6RbIWqTPfcnnJPmMIlSY6I9TmQQAopHPjx0GptFPgOGwE2wzwTAZ-RaXbm6r7SuaR4vBLdP8l0r~6DpnSO0U2COv5kPiSBvMS4dL65h3Nle9sWQc8Q1Ct9OslcMU1JIr2L-FapMc24jmzLP-a1Qow4VnBxSxVXPqItj1axMKL4YHxpZJ7Gssl1oiRlcx6F3zcC6moYVAs2oau~AdUN5EIgr4zldjgpFRni4hAhB30HskkFL~15cbW-4~hcgIwaxP-70kThVT4h~ixXXvzvCnh0FyGX9q8Kx58rb484g__"
+                alt="logo do Centro Territorial de Educação Profissional da Bacia do Paramirim"
+              />
+              <h3 class="top-news__news__title">
+                Aluno esfaqueia professor, em sala de aula...
+              </h3>
+            </div>
+          </article>
+          <article class="top-news__container-news__news news-3">
+            <div class="top-news__container-news__news__flex-wrapper">
+              <img
+                class="top-news__news__image"
+                src="https://s3-alpha-sig.figma.com/img/4c82/6944/4626936823f64af91bbf6737865df492?Expires=1726444800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=GhG9CccRzSScDaRrfyyg1tohVyp6EEpO~ucsHcrXuC30rqVxsqVbTuXVsZ5F7jzzuGjHXcwF6E8mjr9VNo1W4JR9DfP--N~hwmhLJm3A0dcvPIvDg74zwP7ZrIoaOQaG-eOkjAO3ScwqH~YTuTTAktZyYZWbtrHdx~7Lewjo1r8~KUfebMAjVPI3VcVejcmdx9BZ13pZxtcmns3YG~afeXaruHhaeIn4ptIOI24evuX9ZDaGCGlmNYWWRVL3PobLOEX~3Cak4p4qttfNE~0as~qvQOlXZaOmRxZpbHuiMlkza5oUwtE6JytZizoij9~W1SeZGlfJhOYEXifiWHR0Gw__"
+                alt="calçola azul em um fundo branco"
+              />
+              <h3 class="top-news__news__title">
+                Aluna joga cauçola em professor...
+              </h3>
+            </div>
+          </article>
+          <button class="top-news__news__button">Mais</button>
+        </div>
+      </section>
+      <section class="events">
+        <h2 class="events__title">Eventos</h2>
+        <div class="events__days-week">
+          <div class="events__day events__day--selected">
+            <span>Seg</span>
+            <span class="events__day__date">23/09</span>
+          </div>
+          <div class="events__day">
+            <span>Ter</span>
+            <span class="events__day__date">24/09</span>
+          </div>
+          <div class="events__day">
+            <span>Qua</span>
+            <span class="events__day__date">25/09</span>
+          </div>
+          <div class="events__day">
+            <span>Qui</span>
+            <span class="events__day__date">26/09</span>
+          </div>
+          <div class="events__day">
+            <span>Sex</span>
+            <span class="events__day__date">27/09</span>
+          </div>
+        </div>
+        <div class="events__turn">
+          <div class="events__turn__organizer events__turn__organizer--selected">
+            <span>Mat</span>
+          </div>
+          <div class="events__turn__organizer">
+            <span>Vesp</span>
+          </div>
+          <div class="events__turn__organizer">
+            <span>Not</span>
+          </div>
+        </div>
+        <div class="events__preview">
+          <a class="events__preview__see-more">Ver mais +</a>
+          <div class="events__preview__preview-events-container">
+            <div class="events__preview__content">
+              <div class="events__preview__header"></div>
+              <div class="events__preview__body"></div>
+            </div>
+            <div class="events__preview__content">
+              <div class="events__preview__header"></div>
+              <div class="events__preview__body"></div>
+            </div>
+            <div class="events__preview__content">
+              <div class="events__preview__header"></div>
+              <div class="events__preview__body"></div>
+            </div>
+            <div class="events__preview__content">
+              <div class="events__preview__header"></div>
+              <div class="events__preview__body"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="btn">
+        <div class="btn-organizer">
+          <div class="btn-container__flex-wrapper">
+            <div class="bnt-container__container-icon">
+              <img src="/assets/icons/list.png" alt="Ícone de lista" />
+            </div>
+            <button class="bnt-container__btn">
+              <h3 class="bnt-container__btn__title">Merenda</h3>
+              <p class="bnt-container__btn__description">
+                clique aqui para ver o calendario completo
+              </p>
+            </button>
+          </div>
+          </div>
+        </div>
+      </section>
+    </main>
+<script src="assets/script/menu.js"></script>
+<script src="assets/script/search.js"></script>
+</body>
+</html>

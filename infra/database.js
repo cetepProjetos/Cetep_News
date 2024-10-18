@@ -1,8 +1,8 @@
-require("dotenv").config(); //pega as variaveis de ambiente
 const { Client } = require("pg"); //busca a class cliente no module pg
 
 async function query(sql) {
-  const client = new Client({ //cria nova instancia pro cliente
+  const client = new Client({
+    //cria nova instancia pro cliente
     host: process.env.POSTGRES_HOST,
     password: process.env.POSTGRES_PASSWORD,
     database: process.env.POSTGRES_DATABASE,
