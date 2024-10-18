@@ -24,7 +24,7 @@ exports.up = (pgm) => {
         visualizasoes: {type: 'integer', default: 0},
         data_criacao: {type: 'timestamp', default: pgm.func('current_timestamp')},
         data_postagem: {type: 'timestamp', notNull: true},
-        data_modificacao: {type: 'timestamp', notNull: true},
+        data_modificacao: {type: 'timestamp', default:  pgm.func('current_timestamp')},
         top_semanal: {type: 'boolean', default: false},
         palavras_chaves: {type: 'text'}
     })
